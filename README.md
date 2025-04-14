@@ -1,10 +1,5 @@
-This is a Kotlin Multiplatform project targeting iOS.
+Bug with [moko resources](https://github.com/icerockdev/moko-resources) themed color that occurs when color gets requested from the common code for ios target. 
 
-* `/iosApp` contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform, 
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
+When the app is forced to be in the dark mode with overriding property `window.overrideUserInterfaceStyle` and you try to fetch the color value in common code: on the first fetch it is correct, on the second and further the color theme is always the same as the system one, not the one that the app is currently in.
 
-* `/shared` is for the code that will be shared between all targets in the project.
-  The most important subfolder is `commonMain`. If preferred, you can add code to the platform-specific folders here too.
-
-
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+<img src="/MokoColorBugGig.gif" width="300"/>
