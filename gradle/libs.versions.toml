@@ -1,0 +1,12 @@
+[versions]
+kotlin = "2.0.21"
+mokoGraphics = "0.10.0"
+mokoResources = "0.24.4"
+
+[plugins]
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+mokoResources = { id = "dev.icerock.mobile.multiplatform-resources", version.ref = "mokoResources" }
+
+[libraries]
+mokoGraphics = { module = "dev.icerock.moko:graphics", version.ref = "mokoGraphics" }
+mokoResources-core = { module = "dev.icerock.moko:resources", version.ref = "mokoResources" }
